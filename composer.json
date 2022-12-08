@@ -1,0 +1,26 @@
+{
+    "name": "kaadon/encrypt",
+    "type": "library",
+    "description": "Kaadon encrypt for PHP",
+    "keywords": ["encrypt"],
+    "homepage": "http://developer.kaadon.com/",
+    "license": "MIT",
+    "require": {
+        "PHP": ">=7.1",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Kaadon",
+            "email": "kaadon.com@gmail.com",
+            "homepage": "http://kaadon.com/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kaadon\\Encrypt\\": "src"
+        }
+    },
+    "extra": {
+    }
+}
