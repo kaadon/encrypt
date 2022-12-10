@@ -7,8 +7,8 @@
     "license": "MIT",
     "require": {
         "PHP": ">=7.1",
-        "phpseclib/phpseclib": "3.0.17",
-        "symfony/filesystem": "5.4.13"
+        "phpseclib/phpseclib": "^3",
+        "symfony/filesystem": "^5.4"
     },
     "authors": [
         {
