@@ -25,7 +25,7 @@
     "extra": {
         "think":{
             "config":{
-                "tronservice": "config/tronservice.php"
+                "kaadon": "config/kaadon.php"
             }
         }
     }
