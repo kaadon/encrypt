@@ -3,7 +3,6 @@
 
 return [
     "encrypt" => [
-        "public"  => "",
-        "private" => ""
+        "path"  => "",
     ]
 ];

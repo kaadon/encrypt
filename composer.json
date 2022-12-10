@@ -8,7 +8,7 @@
     "require": {
         "PHP": ">=7.1",
         "phpseclib/phpseclib": "3.0.17",
-        "symfony/filesystem": "4.4.0"
+        "symfony/filesystem": "5.4.13"
     },
     "authors": [
         {
@@ -23,5 +23,8 @@
         }
     },
     "extra": {
+        "config":{
+            "tronservice": "config/kaadon.php"
+        }
     }
 }

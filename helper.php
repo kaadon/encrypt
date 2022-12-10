@@ -1,31 +1,23 @@
 <?php
 
 
-if (!function_exists('jwt_create')) {
-    function jwt_create(string $identification,$data = [])
+if (!function_exists('kaadon_rsa_createKey')) {
+    function kaadon_rsa_createKey()
     {
-        return \Kaadon\Jwt\Jwt::create($identification,$data);
-    }
-}
-if (!function_exists('jwt_verify')) {
-    function jwt_verify($token = null)
-    {
-        return \Kaadon\Jwt\Jwt::verify($token);
-    }
-}
-if (!function_exists('jwt_delete')) {
-    function jwt_delete($identification = null)
-    {
-        if ($identification){
-            return \Kaadon\Jwt\Jwt::delete($identification);
-        }
-        return false;
+        return \Kaadon\Encrypt\TPRSA::createKey();
     }
 }
 
-if (!function_exists('jwt_realIp')) {
-    function jwt_realIp()
+if (!function_exists('kaadon_rsa_encrypt')) {
+    function kaadon_rsa_encrypt(string $string)
     {
-        return \Kaadon\Jwt\Jwt::getIp();
+        return \Kaadon\Encrypt\TPRSA::encrypt($string);
+    }
+}
+
+if (!function_exists('kaadon_rsa_decrypt')) {
+    function kaadon_rsa_decrypt(string $string)
+    {
+        return \Kaadon\Encrypt\TPRSA::decrypt($string);
     }
 }

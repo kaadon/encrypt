@@ -1,4 +1,4 @@
 <?php
-$string = "./php";
-$string = rtrim($string, '/').'/';
-var_dump($string);
+require_once "vendor/autoload.php";
+
+var_dump();

@@ -18,7 +18,6 @@ class RSA
     public function __construct()
     {
         $this->filesystem = new SymfonyFilesystem();
-        return $this;
     }
 
     /**
@@ -27,7 +26,7 @@ class RSA
      * @return bool
      * @throws \Exception
      */
-    public static function createKey(?string $path = null): bool
+    public static function createKey(?string $path = null): array
     {
         if (is_null($path)) {
             throw new \Exception("Please provide PATH");
@@ -44,7 +43,10 @@ class RSA
         } catch (\Exception $exception) {
             throw new \Exception("Create secret error");
         }
-        return true;
+        return [
+            "public"  => $path . 'public.pem',
+            "private" => $path . 'private.pem'
+        ];
     }
 
     /**
