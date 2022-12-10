@@ -7,7 +7,7 @@
     "license": "MIT",
     "require": {
         "PHP": ">=7.1",
-        "phpseclib/phpseclib": "^3",
+        "phpseclib/phpseclib": "~3.0.17",
         "symfony/filesystem": "^5.4"
     },
     "authors": [
@@ -24,7 +24,7 @@
     },
     "extra": {
         "config":{
-            "tronservice": "config/kaadon.php"
+            "kaadon": "config/kaadon.php"
         }
     }
 }
