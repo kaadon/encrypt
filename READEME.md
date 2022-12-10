@@ -1,0 +1,33 @@
+### 前端使用
+
+1. > node
+   >
+   > ****
+   >
+   > ```javascript
+   > var NodeRSA = require('node-rsa');
+   > 
+   > var key = new NodeRSA(`-----BEGIN PUBLIC KEY-----
+   > MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwCM8LfTeTqJTTVlafv8E
+   > vhmcTDivVt72CIBP6gXeTZ8f/UQmPhFZbYvHR4y+yESkwWj0Uiy9LB+CxTRj/7Hx
+   > su7wvpVcrgUqYN7g4U+775EDjCTohww3PWRrzD7FYRkMNwf+VpwPqu95B3CEXXvA
+   > OlFviVqDmBCemlNjNh7qtdry9im58KMdq/2rqzAMNZMKqDKw5QUxyR4DaTB9G5KK
+   > s6EYfXeffzCPtt6k/G+G6umF4cm6DJZTiLk7ScFLO3ppRmoaDUnZKW1nMu3Qy1gY
+   > ftSJJHLxK6tjDo6Q8aR+Fb8dvw3a8Y3VarwLsbcPB9/2koDh3ILH3RVDlVm+zAWN
+   > qBo4ogczX8QCRa6NUZ3mNSj/sLaE0iO24iPXqKSu99rthw12ieERhbQW6oUXX7zd
+   > bTc6gk9xz9HVIY6S2u570cC071CAWpdKj3lBNpGLKlTocvK5xTs5bhNfjEWLenQv
+   > 5GdfqBzJIIPID677t4LZu4/3XDb/KtWVVaN/SILlO/3Oy6lGY5sscypbFoIg6rn6
+   > qvvwP4dT+/se/4xPshMgPRxfU12lyKXUoIIhJ1pmASq2sGPsAABncgqY050DEj18
+   > uJqVKROymDJdWoiRCg2VMgL2r0ulHnHf0RuRf6fJHLMQ+1COCbtZc8adddDNbKun
+   > VgEYh0SXsKDrWwPd47CnngcCAwEAAQ==
+   > -----END PUBLIC KEY-----`);
+   > key.setOptions({encryptionScheme: 'pkcs1'});
+   > 
+   > var ciphertext = '123456';
+   > 
+   > var plaintext = key.encrypt(ciphertext, 'base64');
+   > // plaintext = Buffer.from(plaintext, 'base64');
+   > console.log(plaintext);
+   > ```
+
+   
